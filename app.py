@@ -1,32 +1,51 @@
+from modules.dashboard import show_dashboard
+from modules.data_driven import show_data_driven
+from modules.criteria_weight import show_criteria_weight
+from modules.payoff_table import show_payoff_table
+from modules.ev_eol import show_ev_eol
+from modules.uncertainty import show_uncertainty
+from modules.distribution import show_distribution
+from modules.utility import show_utility
+from modules.monte_carlo import show_monte_carlo
+from modules.recommendation_engine import show_recommendation
 
-import streamlit as st
+menu = sidebar_menu()
+if menu == "🏠 Dashboard":
 
-from config import APP_TITLE, PAGE_ICON
+    show_dashboard()
 
-st.set_page_config(
-page_title=APP_TITLE,
-page_icon=PAGE_ICON,
-layout="wide"
-)
+elif menu == "📊 Data-Driven DSS":
 
-st.title("🤎 Business Location DSS")
+    show_data_driven()
 
-st.success("🚀 Deployment Successful")
+elif menu == "⚖️ Criteria Weight":
 
-st.write("""
-Sistem Pendukung Keputusan
-untuk menentukan lokasi usaha terbaik
-menggunakan berbagai metode DSS.
-""")
+    show_criteria_weight()
 
-st.info("""
-Menu DSS:
+elif menu == "📋 Payoff Table":
 
-* Dashboard
-* Data Driven DSS
-* EV & EOL
-* Monte Carlo
-* Utility Function
-* Recommendation Engine
-  """)
-  
+    show_payoff_table()
+
+elif menu == "🎲 EV & EOL":
+
+    show_ev_eol()
+
+elif menu == "❓ Uncertainty":
+
+    show_uncertainty()
+
+elif menu == "📈 Distribution":
+
+    show_distribution()
+
+elif menu == "⚖️ Utility Function":
+
+    show_utility()
+
+elif menu == "🎰 Monte Carlo":
+
+    show_monte_carlo()
+
+elif menu == "🏆 Recommendation":
+
+    show_recommendation()
