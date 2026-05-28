@@ -1,4 +1,3 @@
-```python
 import streamlit as st
 
 from config import APP_TITLE, PAGE_ICON
@@ -66,4 +65,4 @@ elif menu == "🎰 Monte Carlo":
 elif menu == "🏆 Recommendation":
 
     show_recommendation()
-```
+
